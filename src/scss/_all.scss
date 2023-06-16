@@ -1,6 +1,9 @@
 html,
 body {
 	font-family: 'Roboto', sans-serif;
+	scroll-behavior: smooth;
+	position: relative;
+	height: 100%;
 }
 
 .container {

@@ -1,5 +1,7 @@
-import '../scss/index.scss';
 import { getUserLocation } from './location';
+import Swiper from 'swiper';
+import '../scss/index.scss';
+import 'swiper/css';
 
 const app = () => {
 	//
@@ -23,6 +25,32 @@ const app = () => {
 		if (!isModal) {
 			modalWindow.classList.remove('visible_modal');
 		}
+	});
+
+	const swiper = new Swiper('.swiper', {
+		slidesPerView: 3,
+		loop: true,
+		speed: 1000,
+		spaceBetween: 60,
+		centeredSlides: true,
+		slideToClickedSlide: true,
+		breakpoints: {
+			640: {
+				slidesPerView: 3,
+				loop: true,
+				spaceBetween: 20,
+			},
+			768: {
+				loop: true,
+				slidesPerView: 3,
+				spaceBetween: 40,
+			},
+			1024: {
+				loop: true,
+				slidesPerView: 3,
+				spaceBetween: 60,
+			},
+		},
 	});
 };
 

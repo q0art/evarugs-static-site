@@ -1,0 +1,62 @@
+.review {
+	position: relative;
+	background: $gradient-swiper;
+	padding: 20px 0 40px;
+}
+
+.review_wrapper {
+	padding: 60px 0 0;
+}
+
+.review_slide {
+	background: $white;
+	text-align: center;
+	border-radius: $border-md;
+	box-shadow: $shadow;
+	padding: 80px 20px 20px;
+}
+
+.review_slide--text {
+	color: $black;
+	font-size: $font-lg;
+	line-height: $lh-lg;
+	margin: 20px 0;
+}
+
+.review_slide--title::before {
+	content: '';
+	position: relative;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	display: block;
+	max-width: 100px;
+	height: 3px;
+	background: $gradient-line;
+	border-radius: $border-sm;
+
+	margin-bottom: 12px;
+}
+
+.review_slide--title {
+	color: $gray;
+	font-size: $font-sm;
+	line-height: $lh-sm;
+}
+
+.review_slide--img {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: -30%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	background: $gradient-line;
+	clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.review_slide--avatar {
+	width: 98px;
+	height: 98px;
+	clip-path: polygon(50% 4%, 96% 25%, 96% 75%, 50% 96%, 4% 75%, 4% 25%);
+}
