@@ -1,0 +1,68 @@
+.about {
+	padding: 80px 0 100px;
+	background: url('./../images/svg/decore_main_2.svg');
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position-x: 200px;
+	background-position-y: 200px;
+}
+
+.about_wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 80px;
+}
+
+.about--title {
+	font-weight: 400;
+	font-size: 50px;
+	line-height: $lh-md;
+	text-align: center;
+}
+
+.about--title span {
+	background: $gradient-text;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.about_cards {
+	display: flex;
+	gap: 60px;
+}
+
+.about_card {
+	max-width: 320px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 20px;
+
+	background: $white;
+	border-radius: $border-md;
+	box-shadow: $shadow;
+}
+
+.about_card--img img {
+	width: 100%;
+	border-radius: $border-md $border-md 0 0;
+}
+
+.about_card--title {
+	font-style: italic;
+	margin: 20px;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: $lh-md;
+}
+
+.about_card--text {
+	margin: 0 40px 40px;
+	color: $gray;
+	font-size: $font-md;
+	line-height: $lh-md;
+}

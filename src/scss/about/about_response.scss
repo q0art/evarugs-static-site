@@ -1,0 +1,44 @@
+@media screen and (max-width: $screen-lg) {
+	.about_cards {
+		gap: 20px;
+	}
+
+	.about_card--title {
+		margin: 20px 10px;
+		font-size: $font-lg;
+	}
+
+	.about_card--text {
+		margin: 0 20px 40px;
+	}
+}
+
+@media screen and (max-width: $screen-md) {
+	.about--title {
+		font-size: 36px;
+	}
+
+	.about_cards {
+		flex-direction: column;
+		gap: 60px;
+	}
+
+	.about_card--title {
+		margin: 20px 20px;
+		font-size: 36px;
+	}
+
+	.about_card--text {
+		margin: 20px 40px 40px;
+	}
+}
+
+@media screen and (max-width: $screen-sm) {
+	.about--title {
+		font-size: 32px;
+	}
+
+	.about_card--text {
+		margin: 20px 40px 20px;
+	}
+}

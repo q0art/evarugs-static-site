@@ -30,7 +30,7 @@
 .preview_logo--text {
 	color: $black;
 	font-weight: 900;
-	font-size: 32px;
+	font-size: 36px;
 	line-height: $lh-md;
 }
 
@@ -63,10 +63,10 @@
 }
 
 .preview_left--title {
+	max-width: 500px;
 	font-style: italic;
-	max-width: 300px;
 	font-weight: 900;
-	font-size: 32px;
+	font-size: 50px;
 	line-height: $lh-md;
 }
 

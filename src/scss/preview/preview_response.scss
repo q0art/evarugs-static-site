@@ -1,13 +1,23 @@
 @media screen and (max-width: $screen-lg) {
-	.preview_logo--text,
+	.preview_logo--text {
+		font-size: 32px;
+	}
 	.preview_left--title {
 		font-size: 36px;
+	}
+
+	.preview_left--title {
+		max-width: 300px;
 	}
 }
 
 @media screen and (max-width: $screen-md) {
 	.preview_nav--text {
 		display: none;
+	}
+
+	.preview_left--title {
+		max-width: 200px;
 	}
 
 	.preview_top {
@@ -38,5 +48,9 @@
 	.preview_logo--text,
 	.preview_left--title {
 		font-size: 28px;
+	}
+
+	.preview_left--title {
+		max-width: 300px;
 	}
 }
