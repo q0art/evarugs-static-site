@@ -1,0 +1,21 @@
+@import '_all';
+@import 'reset';
+@import 'vars';
+
+@import 'about/about.scss';
+@import 'about/about_response.scss';
+
+@import 'footer/footer.scss';
+@import 'footer/footer_response.scss';
+
+@import 'header/header.scss';
+@import 'header/header_response.scss';
+
+@import 'modal/modal.scss';
+@import 'modal/modal_response.scss';
+
+@import 'preview/preview.scss';
+@import 'preview/preview_response.scss';
+
+@import 'review/review.scss';
+@import 'review/review_response.scss';

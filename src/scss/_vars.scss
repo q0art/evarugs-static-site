@@ -1,0 +1,35 @@
+$screen-lg: 1024px;
+$screen-md: 768px;
+$screen-sm: 630px;
+
+$lh-lg: 133%;
+$lh-md: 116%;
+$lh-sm: 100%;
+
+$font-lg: 18px;
+$font-md: 16px;
+$font-sm: 14px;
+
+$white: #ffffff;
+$black: #000000;
+$gray: #a2a2a2;
+
+$shadow: 0px 0px 35px rgba(212, 20, 90, 0.25);
+
+$gradient-text: linear-gradient(180deg, #b90160 0%, #3d5bf5 100%);
+$gradient-button: linear-gradient(96.12deg, #d4145a -21.03%, #3d5bf5 103.56%);
+$gradient-line: linear-gradient(
+	90deg,
+	rgba(185, 1, 96, 1) 0%,
+	rgba(61, 91, 245, 1) 100%
+);
+$gradient-header: linear-gradient(
+	269.91deg,
+	rgba(46, 49, 146, 0.7) 0%,
+	rgba(212, 20, 90, 0.7) 98.16%
+);
+$gradiwnt-swiper: linear-gradient(
+	94.91deg,
+	rgba(212, 20, 90, 0.25) 0.96%,
+	rgba(46, 49, 146, 0.25) 104.83%
+);

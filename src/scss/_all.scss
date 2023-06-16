@@ -1,0 +1,14 @@
+html,
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	max-width: 1240px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.visible {
+	display: flex;
+}
