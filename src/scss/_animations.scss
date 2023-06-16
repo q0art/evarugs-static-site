@@ -1,0 +1,13 @@
+.e-on {
+	opacity: 0;
+	animation: e-on 0.8s forwards;
+}
+
+@keyframes e-on {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

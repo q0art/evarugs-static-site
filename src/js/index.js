@@ -13,10 +13,12 @@ const app = () => {
 
 	modalButtonOpen.addEventListener('click', () => {
 		modalWindow.classList.add('visible_modal');
+		modalWindow.classList.add('e-on');
 	});
 
 	modalButtonClose.addEventListener('click', () => {
 		modalWindow.classList.remove('visible_modal');
+		modalWindow.classList.remove('e-on');
 	});
 
 	modalWindow.addEventListener('click', (event) => {
