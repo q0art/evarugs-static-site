@@ -1,0 +1,23 @@
+.ui--button {
+	max-width: 150px;
+	padding: 10px 20px;
+	background: $gradient-button;
+	border: none;
+	border-radius: $border-sm;
+
+	color: $white;
+	font-weight: 900;
+	font-size: $font-lg;
+	line-height: $lh-lg;
+	cursor: pointer;
+}
+
+.ui--button:hover {
+	background: $gradient-line;
+	opacity: 80%;
+}
+
+.ui--button:active {
+	scale: 90%;
+	transition: 0.3s all;
+}

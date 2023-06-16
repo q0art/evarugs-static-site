@@ -34,7 +34,7 @@
 						<div class="header_point--img">
 							<img src="./images/svg/point-icon.svg" alt="point-icon" />
 						</div>
-						<span class="header_point--text">Ваш гoрoд</span>
+						<span class="header_point--text"></span>
 					</a>
 					<!--  -->
 					<a href="#" class="header_insta--link">
@@ -77,7 +77,9 @@
 									Инновационные коврики для автомобиля
 								</h2>
 								<h3 class="preview_left--text">В вашем городе</h3>
-								<button class="preview_left--button">Заказать</button>
+								<button type="button" class="preview_left--button ui--button">
+									Заказать
+								</button>
 							</div>
 							<!--  -->
 							<div class="preview_right--img">
@@ -127,5 +129,40 @@
 			</div>
 		</footer>
 		<!--  -->
+		<div class="modal">
+			<form action="#" class="modal_wrapper">
+				<h2 class="modal--title">ФОРМА ЗАЯВКИ</h2>
+				<!--  -->
+				<div class="modal_top">
+					<input
+						type="text"
+						name=""
+						id=""
+						placeholder="Ваше имя"
+						class="modal_input--sm"
+					/>
+					<input
+						type="text"
+						name=""
+						id=""
+						placeholder="Ваш e-mail"
+						class="modal_input--sm"
+					/>
+				</div>
+				<!--  -->
+				<textarea
+					name=""
+					id=""
+					cols="30"
+					rows="10"
+					placeholder="Ваше сообщение (марка автомобиля, цвет ковриков, номер телефона)"
+					class="modal_input--md"
+				></textarea>
+				<!--  -->
+				<button type="button" class="modal--button ui--button">
+					Oтправить
+				</button>
+			</form>
+		</div>
 	</body>
 </html>
