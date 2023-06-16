@@ -1,0 +1,86 @@
+@media screen and (max-width: $screen-lg) {
+	.footer_insta--link,
+	.footer_phone--link,
+	.footer_about--link {
+		max-width: 200px;
+	}
+
+	.footer_decore--1 {
+		top: 40%;
+		left: 30%;
+		width: 10%;
+		height: 10%;
+		transform: translate(-50%, -50%);
+	}
+
+	.footer_decore--2 {
+		top: 60%;
+		left: 70%;
+		width: 20%;
+		height: 20%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media screen and (max-width: $screen-md) {
+	.footer_insta--title,
+	.footer_phone--title,
+	.footer_about--title {
+		font-size: $font-sm;
+		line-height: $lh-sm;
+		margin-bottom: 10px;
+	}
+	.footer_insta--link,
+	.footer_phone--link,
+	.footer_about--link {
+		max-width: 150px;
+	}
+
+	.footer_decore--1 {
+		top: 40%;
+		left: 10%;
+		width: 10%;
+		height: 10%;
+		transform: translate(-50%, -50%);
+	}
+
+	.footer_decore--2 {
+		top: 50%;
+		left: 80%;
+		width: 20%;
+		height: 20%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media screen and (max-width: $screen-sm) {
+	.footer_wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 40px;
+	}
+
+	.footer_insta--link,
+	.footer_phone--link,
+	.footer_about--link {
+		max-width: 200px;
+	}
+
+	.footer_decore--1 {
+		top: 40%;
+		left: 40%;
+		width: 20%;
+		height: 20%;
+		transform: translate(-50%, -50%);
+	}
+
+	.footer_decore--2 {
+		top: 80%;
+		left: 80%;
+		width: 30%;
+		height: 30%;
+		transform: translate(-50%, -50%);
+	}
+}
