@@ -44,7 +44,8 @@
 	}
 
 	.header_phone--img {
-		display: none;
+		display: none; // такое лучше не применять, а прямо в html дописать класс hidden-mobile
+		// *естественно стили для него тоже нужно написать))
 	}
 
 	.header_insta--link {

@@ -8,7 +8,7 @@
 	justify-content: space-between;
 	align-items: center;
 }
-
+// для такого лучше завести отдельный класс
 .header_phone--link,
 .header_point--link,
 .header_insta--link {
@@ -33,5 +33,5 @@
 }
 
 .header_insta--text {
-	max-width: 150px;
+	max-width: 150px; // а если заказчик скажет поменять текст на "посетите нашу страницу в инстаграме"?)
 }

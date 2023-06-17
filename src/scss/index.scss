@@ -2,11 +2,11 @@
 @import 'animations';
 @import 'reset';
 @import 'vars';
+@import "mixins/all";
 
 @import '_ui/button.scss';
 
 @import 'about/about.scss';
-@import 'about/about_response.scss';
 
 @import 'footer/footer.scss';
 @import 'footer/footer_response.scss';

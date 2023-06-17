@@ -1,6 +1,6 @@
-export const getUserLocation = () => {
+// умно))0)
+export const getUserLocation = () => { // такие запросы лучше складывать в отдельный файл типа /js/api/index.js
 	const headerPoint = document.querySelector('.header_point--text');
-
 	const success = (pos) => {
 		const { latitude } = pos.coords;
 		const { longitude } = pos.coords;
@@ -10,7 +10,7 @@ export const getUserLocation = () => {
 			.then((res) => res.json())
 			.then((data) => {
 				if (data.locality) {
-					headerPoint.textContent = data.city;
+					headerPoint.textContent = data.city; // Не лучшая идея. Такая функция должна только возвращать город
 				} else {
 					headerPoint.textContent = 'Ваш гoрoд';
 				}

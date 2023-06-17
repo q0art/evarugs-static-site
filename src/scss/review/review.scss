@@ -5,7 +5,7 @@
 }
 
 .review_wrapper {
-	padding: 60px 0 0;
+	//padding: 60px 0 0; // ни в коем случае нельзя задавать отступы на внутренние классы Swiper'а
 }
 
 .review_slide {
@@ -14,6 +14,11 @@
 	border-radius: $border-md;
 	box-shadow: $shadow;
 	padding: 80px 20px 20px;
+	position: relative;
+
+	&-wrapper {
+		padding-top: 24px;
+	}
 }
 
 .review_slide--text {

@@ -1,6 +1,7 @@
+// @todo найти шрифт из макета, прогнать через https://transfonter.org/ и подключить
 html,
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif; // @todo минимум 3
 	scroll-behavior: smooth;
 	position: relative;
 	height: 100%;

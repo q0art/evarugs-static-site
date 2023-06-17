@@ -1,0 +1,14 @@
+@mixin center-flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-inline svg {
+  width: 100%;
+  display: block;
+}
+
+@mixin card($container-gap, $card-count) {
+  width: calc((100% / #{$card-count}) - ($container-gap * ($card-count - 1) / $card-count));
+}
