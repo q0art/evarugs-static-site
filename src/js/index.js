@@ -1,35 +1,60 @@
-import { getUserLocation } from './location';
+import { getUserLocation } from './api/location';
 import Swiper from 'swiper';
 import '../scss/index.scss';
 import 'swiper/css';
 
 const app = () => {
-	//
-	getUserLocation();
+	const userCities = [];
+	getUserLocation()
+		.then((city) => {
+			userCities.push(city);
+			//
+			const headerPoint = document.querySelector('.header_point--text');
+			headerPoint.textContent = userCities[userCities.length - 1];
+		})
+		.catch((error) => {
+			console.error(error);
+		});
 
-	const modalWindow = document.querySelector('.modal');
-	const modalButtonOpen = document.querySelector('.preview_left--button');
-	const modalButtonClose = document.querySelector('.modal--button');
+	const viewOn = [{ transform: 'scale(0)' }, { transform: 'scale(1)' }];
+	const viewOff = [{ transform: 'scale(1)' }, { transform: 'scale(0)' }];
+	const timing = { duration: 1000, iteration: 1 };
 
-	modalButtonOpen.addEventListener('click', () => {
-		modalWindow.classList.add('visible_modal');
-		modalWindow.classList.add('e-on');
+	document.addEventListener('click', ({ target }) => {
+		const modalOpen = target.closest('.preview_left--button');
+
+		if (!modalOpen) return;
+
+		modalOpen.animate(viewOn, timing).finished.then(() => {
+			modalOpen.style.display = 'flex';
+		});
 	});
 
-	modalButtonClose.addEventListener('click', () => {
-		modalWindow.classList.remove('visible_modal');
-		modalWindow.classList.remove('e-on');
+	document.addEventListener('click', ({ target }) => {
+		const modalClose = target.closest('.modal--button');
+
+		if (!modalClose) return;
+
+		modalClose.animate(viewOff, timing).finished.then(() => {
+			modalClose.style.display = 'none';
+		});
 	});
 
-	modalWindow.addEventListener('click', (event) => {
-		const isModal = event.target.closest('.modal_wrapper');
+	document.addEventListener('click', ({ target }) => {
+		const isModal = target.closest('.modal_wrapper');
 
 		if (!isModal) {
-			modalWindow.classList.remove('visible_modal');
+			const modal = target.closest('.modal');
+
+			if (!modal) return;
+
+			modal.animate(viewOn, timing).finished.then(() => {
+				modalClose.style.display = 'none';
+			});
 		}
 	});
 
-	const swiper = new Swiper('.swiper', {
+	const swiper_preview = new Swiper('.review_swiper', {
 		slidesPerView: 3,
 		loop: true,
 		speed: 1000,
@@ -38,18 +63,12 @@ const app = () => {
 		slideToClickedSlide: true,
 		breakpoints: {
 			640: {
-				slidesPerView: 3,
-				loop: true,
 				spaceBetween: 20,
 			},
 			768: {
-				loop: true,
-				slidesPerView: 3,
 				spaceBetween: 40,
 			},
 			1024: {
-				loop: true,
-				slidesPerView: 3,
 				spaceBetween: 60,
 			},
 		},
