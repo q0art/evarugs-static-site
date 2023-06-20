@@ -1,0 +1,125 @@
+.header {
+	background: $gradient-header;
+	padding: 35px 100px;
+
+	@include low-desktop {
+		padding: 35px 10px;
+	}
+
+	@include tablet {
+		padding: 35px 50px;
+	}
+
+	@include mobile {
+		padding: 35px 25px;
+	}
+
+	&_wrapper {
+		@include flex-space-row;
+
+		@include mobile {
+			@include flex-center-column;
+			gap: 35px;
+		}
+	}
+
+	&_phone {
+		@include flex-center-row;
+		gap: 10px;
+
+		@include tablet {
+			display: none;
+		}
+
+		@include mobile {
+			@include flex-center-column;
+			gap: 15px;
+		}
+
+		&--img {
+			img {
+				height: 25px;
+			}
+
+			@include mobile {
+				display: none;
+			}
+		}
+
+		&--text {
+			color: $white;
+			font-weight: 500;
+			font-size: $font-md;
+			line-height: $lh-md;
+
+			@include low-desktop {
+				font-size: $font-sm;
+				line-height: $lh-sm;
+			}
+
+			@include mobile {
+				font-size: $font-lg;
+				line-height: $lh-lg;
+			}
+		}
+	}
+
+	&_point {
+		@include flex-center-row;
+		gap: 10px;
+
+		&--img {
+			img {
+				height: 25px;
+			}
+
+			@include mobile {
+				display: none;
+			}
+		}
+
+		&--text {
+			color: $white;
+			font-weight: 500;
+			font-size: $font-md;
+			line-height: $lh-md;
+
+			@include low-desktop {
+				font-size: $font-sm;
+				line-height: $lh-sm;
+			}
+
+			@include mobile {
+				font-size: $font-lg;
+				line-height: $lh-lg;
+			}
+		}
+	}
+
+	&_insta {
+		@include flex-center-row;
+		gap: 10px;
+
+		@include mobile {
+			display: none;
+		}
+
+		&--img {
+			img {
+				height: 25px;
+			}
+		}
+
+		&--text {
+			color: $white;
+			font-weight: 500;
+			font-size: $font-md;
+			line-height: $lh-md;
+
+			@include low-desktop {
+				font-size: $font-sm;
+				line-height: $lh-sm;
+			}
+		}
+	}
+}
