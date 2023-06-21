@@ -1,0 +1,131 @@
+.preview {
+	background-image: url('./../images/svg/decore_main_1.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+
+	padding: 60px 0;
+
+	&_wrapper {
+		@include flex-center-column;
+		gap: 20px;
+	}
+
+	&_top {
+		@include flex-space-row;
+
+		@include tablet {
+			@include flex-center-row;
+		}
+	}
+
+	&_logo {
+		@include flex-center-row;
+		gap: 10px;
+
+		&--img {
+			img {
+				height: 60px;
+
+				@include tablet {
+					height: 50px;
+				}
+
+				@include mobile {
+					height: 40px;
+				}
+			}
+		}
+
+		&--title {
+			color: $black;
+			font-weight: 900;
+			font-size: 36px;
+			line-height: $lh-md;
+
+			@include low-desktop {
+				font-size: 32px;
+			}
+		}
+	}
+
+	&_nav {
+		@include flex-center-row;
+		gap: 30px;
+
+		@include tablet {
+			display: none;
+		}
+
+		&--link {
+			color: $black;
+			font-weight: 300;
+			font-size: $font-lg;
+			line-height: $lh-lg;
+		}
+	}
+
+	&_bot {
+		@include flex-space-row;
+
+		@include tablet {
+			@include flex-center-row;
+		}
+	}
+
+	&_left {
+		@include flex-start-column;
+		gap: 30px;
+		padding: 30px;
+
+		@include tablet {
+			@include flex-center-column;
+			align-items: center;
+			text-align: center;
+		}
+
+		&--title {
+			color: $black;
+			font-weight: 900;
+			font-size: 50px;
+			line-height: $lh-md;
+
+			@include low-desktop {
+				font-size: 44px;
+			}
+
+			@include tablet {
+				font-size: 40px;
+			}
+
+			@include mobile {
+				font-size: 36px;
+			}
+		}
+
+		&--subtitle {
+			color: $black;
+			font-weight: 400;
+			font-size: $font-lg;
+			line-height: &lh-lg;
+		}
+
+		&--button {
+			padding: 10px 20px;
+			background: $gradient-button;
+			border-radius: $border-sm;
+			border: none;
+
+			color: $white;
+			font-weight: 900;
+			font-size: $font-lg;
+			line-height: $lh-lg;
+		}
+	}
+
+	&_right {
+		@include tablet {
+			display: none;
+		}
+	}
+}

@@ -1,24 +1,12 @@
-@import '_all';
-@import 'animations';
+@import 'all';
 @import 'reset';
 @import 'vars';
 
-@import '_ui/button.scss';
-
-@import 'about/about.scss';
-@import 'about/about_response.scss';
-
-@import 'footer/footer.scss';
-@import 'footer/footer_response.scss';
-
-@import 'header/header.scss';
-@import 'header/header_response.scss';
-
-@import 'modal/modal.scss';
-@import 'modal/modal_response.scss';
-
-@import 'preview/preview.scss';
-@import 'preview/preview_response.scss';
-
-@import 'review/review.scss';
-@import 'review/review_response.scss';
+@import '_mixins/all';
+@import 'customs';
+@import 'about.scss';
+@import 'footer.scss';
+@import 'header.scss';
+@import 'modal.scss';
+@import 'preview.scss';
+@import 'review.scss';

@@ -1,6 +1,6 @@
 .header {
 	background: $gradient-header;
-	padding: 35px 100px;
+	padding: 35px;
 
 	@include low-desktop {
 		padding: 35px 10px;
@@ -37,9 +37,7 @@
 		}
 
 		&--img {
-			img {
-				height: 25px;
-			}
+			height: 25px;
 
 			@include mobile {
 				display: none;
@@ -69,9 +67,7 @@
 		gap: 10px;
 
 		&--img {
-			img {
-				height: 25px;
-			}
+			height: 30px;
 
 			@include mobile {
 				display: none;
@@ -106,7 +102,7 @@
 
 		&--img {
 			img {
-				height: 25px;
+				height: 35px;
 			}
 		}
 
