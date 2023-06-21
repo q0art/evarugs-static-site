@@ -2,14 +2,6 @@ $screen-lg: 1024px;
 $screen-md: 768px;
 $screen-sm: 640px;
 
-$lh-lg: 133%;
-$lh-md: 116%;
-$lh-sm: 100%;
-
-$font-lg: 18px;
-$font-md: 16px;
-$font-sm: 14px;
-
 $white: #ffffff;
 $black: #000000;
 $gray: #a2a2a2;
@@ -37,3 +29,141 @@ $gradient-swiper: linear-gradient(
 	rgba(212, 20, 90, 0.25) 0.96%,
 	rgba(46, 49, 146, 0.25) 104.83%
 );
+
+$lh-lg: 133%;
+$lh-md: 116%;
+$lh-sm: 100%;
+
+$font-lg: 18px;
+$font-md: 16px;
+$font-sm: 14px;
+
+$font-primary: 'Roboto';
+$font-secondary: 'Lato';
+$font-tertiary: 'Open Sans';
+
+//
+
+@font-face {
+	font-family: $font-primary;
+	src: url('./../../public/fonts/Roboto/Roboto-Light.woff2') format('woff2'),
+		url('./../../public/fonts/Roboto/Roboto-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: $font-primary;
+	src: url('./../../public/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+		url('./../../public/fonts/Roboto/Roboto-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: $font-primary;
+	src: url('./../../public/fonts/Roboto/Roboto-Medium.woff2') format('woff2'),
+		url('./../../public/fonts/Roboto/Roboto-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: $font-primary;
+	src: url('./../../public/fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
+		url('./../../public/fonts/Roboto/Roboto-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: $font-primary;
+	src: url('./../../public/fonts/Roboto/Roboto-Black.woff2') format('woff2'),
+		url('./../../public/fonts/Roboto/Roboto-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+//
+
+@font-face {
+	font-family: $font-secondary;
+	src: url('./../../public/fonts/Lato/Lato-Regular.woff2') format('woff2'),
+		url('./../../public/fonts/Lato/Lato-Regular.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: $font-secondary;
+	src: url('./../../public/fonts/Lato/Lato-Regular.woff2'),
+		url('./../../public/fonts/Lato/Lato-Regular.woff2') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: $font-secondary;
+	src: url('./../../public/fonts/Lato/Lato-Bold.woff2') format('woff2'),
+		url('./../../public/fonts/Lato/Lato-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: $font-secondary;
+	src: url('./../../public/fonts/Lato/Lato-Black.woff2') format('woff2'),
+		url('./../../public/fonts/Lato/Lato-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+//
+
+@font-face {
+	font-family: font-tertiary;
+	src: url('./../../public/fonts/OpenSans/OpenSans-Light.woff2') format('woff2'),
+		url('./../../public/fonts/OpenSans/OpenSans-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: font-tertiary;
+	src: url('./../../public/fonts/OpenSans/OpenSans-Regular.woff2')
+			format('woff2'),
+		url('./../../public/fonts/OpenSans/OpenSans-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: font-tertiary;
+	src: url('./../../public/fonts/OpenSans/OpenSans-Medium.woff2')
+			format('woff2'),
+		url('./../../public/fonts/OpenSans/OpenSans-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: font-tertiary;
+	src: url('./../../public/fonts/OpenSans/OpenSans-ExtraBold.woff2')
+			format('woff2'),
+		url('./../../public/fonts/OpenSans/OpenSans-ExtraBold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}

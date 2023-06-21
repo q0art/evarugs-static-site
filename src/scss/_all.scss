@@ -1,6 +1,6 @@
 html,
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: $font-primary, $font-secondary, $font-tertiary, sans-serif;
 	scroll-behavior: smooth;
 
 	position: relative;
