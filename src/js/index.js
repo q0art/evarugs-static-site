@@ -4,7 +4,25 @@ import '../scss/index.scss';
 import 'swiper/css';
 
 const app = () => {
-	//
+	var swiper = new Swiper('.swiper', {
+		speed: 500,
+		spaceBetween: 60,
+		slidesPerView: 3,
+		centeredSlides: true,
+		slideToClickedSlide: true,
+
+		direction: getDirection(),
+		on: {
+			resize: function () {
+				swiper.changeDirection(getDirection());
+			},
+		},
+	});
+
+	function getDirection() {
+		return window.innerWidth <= 768 ? 'vertical' : 'horizontal';
+	}
+
 	const userCities = [];
 	getUserLocation()
 		.then((city) => {
@@ -54,27 +72,6 @@ const app = () => {
 			});
 		}
 	});
-
-	const review_swiper = new Swiper('.swiper', {
-		slidesPerView: 3,
-		loop: true,
-		spaceBetween: 60,
-		speed: 300,
-
-		direction: getDirection(),
-		on: {
-			resize: function () {
-				review_swiper.changeDirection(getDirection());
-			},
-		},
-	});
-
-	function getDirection() {
-		const windowWidth = window.innerWidth;
-		const direction = window.innerWidth <= 768 ? 'vertical' : 'horizontal';
-
-		return direction;
-	}
 };
 
 app();

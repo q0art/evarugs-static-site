@@ -1,0 +1,81 @@
+.review {
+	position: relative;
+	width: 100%;
+	background: $gradient-swiper;
+
+	@include tablet {
+		max-height: 500px;
+	}
+
+	&_wrapper {
+		padding: 60px 0;
+		@include flex-center-row;
+
+		@include tablet {
+			@include flex-center-column;
+		}
+	}
+
+	&_slide {
+		max-width: 400px;
+		background-color: $white;
+		text-align: center;
+		border-radius: $border-md;
+		box-shadow: $shadow;
+		padding: 90px 30px 30px;
+
+		@include low-desktop {
+			padding: 90px 20px 20px;
+		}
+
+		&--text {
+			color: $black;
+			font-size: $font-lg;
+			line-height: $lh-lg;
+			margin-bottom: 20px;
+
+			@include low-desktop {
+				font-size: $font-md;
+				line-height: $lh-md;
+			}
+		}
+
+		&--title {
+			color: $gray;
+			font-weight: 400;
+			font-size: $font-sm;
+			line-height: $lh-sm;
+		}
+
+		&--title::before {
+			content: '';
+			position: relative;
+			top: 0%;
+			left: 50%;
+			transform: translate(-50%, 50%);
+			display: block;
+			max-width: 120px;
+			margin-bottom: 20px;
+			height: 3px;
+			background: $gradient-line;
+			border-radius: $border-sm;
+		}
+
+		&--img {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: -40%;
+			left: 50%;
+			transform: translate(-50%, 50%);
+			background: $gradient-line;
+			clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+
+			img {
+				width: 98px;
+				height: 98px;
+				clip-path: polygon(50% 4%, 96% 25%, 96% 75%, 50% 96%, 4% 75%, 4% 25%);
+			}
+		}
+	}
+}
