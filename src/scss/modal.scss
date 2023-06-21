@@ -1,0 +1,88 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: none;
+	z-index: 10;
+	backdrop-filter: blur(20px);
+	transition: all ease 1s;
+
+	&_wrapper {
+		@include flex-center-column;
+		align-items: center;
+		position: relative;
+		gap: 10px;
+		padding: 45px 60px;
+		margin: auto auto;
+		z-index: 20;
+		background: $white;
+		border-radius: $border-lg;
+		box-shadow: $shadow;
+
+		@include low-desktop {
+			padding: 30px;
+		}
+	}
+
+	&_top {
+		@include flex-center-row;
+		gap: 10px;
+
+		@include tablet {
+			width: 100%;
+			@include flex-center-column;
+			align-items: center;
+			gap: 30px;
+		}
+	}
+
+	&--title {
+		color: $black;
+		font-weight: 500;
+		font-size: $font-lg;
+		line-height: $lh-lg;
+		margin-bottom: 30px;
+	}
+
+	&_input--sm,
+	&_input--md {
+		background: $white;
+		border-radius: $border-md;
+		border: 1px solid $gray;
+
+		font-weight: 300;
+		font-size: $font-md;
+		line-height: $lh-md;
+
+		padding: 20px;
+
+		@include tablet {
+			width: 500px;
+		}
+
+		@include mobile {
+			max-width: 300px;
+		}
+	}
+
+	&_input--md {
+		width: 100%;
+		resize: none;
+		outline: none;
+		margin-bottom: 20px;
+	}
+
+	&--button {
+		padding: 10px 20px;
+		background: $gradient-button;
+		border-radius: $border-sm;
+		border: none;
+
+		color: $white;
+		font-weight: 900;
+		font-size: $font-lg;
+		line-height: $lh-lg;
+	}
+}
