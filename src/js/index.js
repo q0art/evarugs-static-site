@@ -4,7 +4,7 @@ import '../scss/index.scss';
 import 'swiper/css';
 
 const app = () => {
-	var swiper = new Swiper('.swiper', {
+	const review = new Swiper('.review', {
 		speed: 500,
 		spaceBetween: 60,
 		slidesPerView: 3,
@@ -14,7 +14,7 @@ const app = () => {
 		direction: getDirection(),
 		on: {
 			resize: function () {
-				swiper.changeDirection(getDirection());
+				review.changeDirection(getDirection());
 			},
 		},
 	});

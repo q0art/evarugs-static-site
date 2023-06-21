@@ -2,16 +2,18 @@
 	position: relative;
 	width: 100%;
 	background: $gradient-swiper;
+	box-shadow: $shadow;
 
 	@include tablet {
 		max-height: 500px;
 	}
 
 	&_wrapper {
-		padding: 60px 0;
+		padding: 90px 0;
 		@include flex-center-row;
 
 		@include tablet {
+			padding: 10px 0;
 			@include flex-center-column;
 		}
 	}
@@ -26,6 +28,15 @@
 
 		@include low-desktop {
 			padding: 90px 20px 20px;
+		}
+
+		@include tablet {
+			max-width: 500px;
+			padding: 90px 10px 30px;
+		}
+
+		@include mobile {
+			max-width: 400px;
 		}
 
 		&--text {
@@ -71,11 +82,26 @@
 			background: $gradient-line;
 			clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 
+			@include tablet {
+				top: -30%;
+			}
+
 			img {
 				width: 98px;
 				height: 98px;
 				clip-path: polygon(50% 4%, 96% 25%, 96% 75%, 50% 96%, 4% 75%, 4% 25%);
 			}
+		}
+	}
+}
+
+.swiper-slide {
+	&:not(.swiper-slide-active) {
+		opacity: 0.6;
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 1;
 		}
 	}
 }
