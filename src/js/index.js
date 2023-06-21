@@ -4,6 +4,7 @@ import '../scss/index.scss';
 import 'swiper/css';
 
 const app = () => {
+	//
 	const userCities = [];
 	getUserLocation()
 		.then((city) => {
@@ -18,61 +19,62 @@ const app = () => {
 
 	const viewOn = [{ transform: 'scale(0)' }, { transform: 'scale(1)' }];
 	const viewOff = [{ transform: 'scale(1)' }, { transform: 'scale(0)' }];
-	const timing = { duration: 1000, iteration: 1 };
+	const timing = { duration: 500, iterations: 1 };
+	const modal = document.querySelector('.modal');
 
 	document.addEventListener('click', ({ target }) => {
 		const modalOpen = target.closest('.preview_left--button');
 
 		if (!modalOpen) return;
 
-		modalOpen.animate(viewOn, timing).finished.then(() => {
-			modalOpen.style.display = 'flex';
+		modal.style.display = 'flex';
+		modal.animate(viewOn, timing).finished.then(() => {
+			modal.style.backdropFilter = 'blur(20px)';
 		});
 	});
 
-	document.addEventListener('click', ({ target }) => {
+	modal.addEventListener('click', ({ target }) => {
 		const modalClose = target.closest('.modal--button');
 
 		if (!modalClose) return;
 
-		modalClose.animate(viewOff, timing).finished.then(() => {
-			modalClose.style.display = 'none';
+		modal.style.backdropFilter = 'none';
+		modal.animate(viewOff, timing).finished.then(() => {
+			modal.style.display = 'none';
 		});
 	});
 
-	document.addEventListener('click', ({ target }) => {
+	modal.addEventListener('click', ({ target }) => {
 		const isModal = target.closest('.modal_wrapper');
 
 		if (!isModal) {
-			const modal = target.closest('.modal');
-
-			if (!modal) return;
-
-			modal.animate(viewOn, timing).finished.then(() => {
-				modalClose.style.display = 'none';
+			modal.style.backdropFilter = 'none';
+			modal.animate(viewOff, timing).finished.then(() => {
+				modal.style.display = 'none';
 			});
 		}
 	});
 
-	const swiper_preview = new Swiper('.review_swiper', {
+	const review_swiper = new Swiper('.swiper', {
 		slidesPerView: 3,
 		loop: true,
-		speed: 1000,
 		spaceBetween: 60,
-		centeredSlides: true,
-		slideToClickedSlide: true,
-		breakpoints: {
-			640: {
-				spaceBetween: 20,
-			},
-			768: {
-				spaceBetween: 40,
-			},
-			1024: {
-				spaceBetween: 60,
+		speed: 300,
+
+		direction: getDirection(),
+		on: {
+			resize: function () {
+				review_swiper.changeDirection(getDirection());
 			},
 		},
 	});
+
+	function getDirection() {
+		const windowWidth = window.innerWidth;
+		const direction = window.innerWidth <= 768 ? 'vertical' : 'horizontal';
+
+		return direction;
+	}
 };
 
 app();

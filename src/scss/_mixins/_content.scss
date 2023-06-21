@@ -18,6 +18,13 @@
 	align-items: center;
 }
 
+@mixin flex-top-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+
 @mixin flex-start-row {
 	display: flex;
 	flex-direction: row;
